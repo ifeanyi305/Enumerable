@@ -13,9 +13,10 @@ class MyList
     @list = list
   end
 
-  def filter
-    @list.filter {|item| yield item}
+  def filter(&block)
+    @list.filter(&block)
   end
 end
 
 list = MyList.new([1, 2, 3, 4])
+puts(list)
