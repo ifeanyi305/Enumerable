@@ -12,9 +12,10 @@ class MyList
     @list = list
   end
 
-  def any
-    @list.any {|item| yield item}
+  def any(&block)
+    @list.any(&block)
   end
 end
 
 list = MyList.new([1, 2, 3, 4])
+puts(list)
